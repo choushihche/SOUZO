@@ -1,0 +1,673 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 10;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background: #eee;
+}
+.intro {
+  background: #fff;
+  padding: 60px 30px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 18pt;
+  padding-bottom: 15px;
+}
+.intro p {
+  font-size: 14px;
+}
+
+.action {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+a.btn {
+  text-decoration: none;
+  color: #666;
+  border: 2px solid #666;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-left: 5px;
+}
+a.btn:hover {
+  background: #666;
+  color: #fff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+.btn:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.github:before {
+  content: "\f09b";
+}
+.down:before {
+  content: "\f019";
+}
+.back:before {
+  content: "\f112";
+}
+.credit {
+  background: #fff;
+  padding: 12px;
+  font-size: 9pt;
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+}
+.credit span:before {
+  font-family: FontAwesome;
+  color: #e41b17;
+  content: "\f004";
+}
+.credit a {
+  color: #333;
+  text-decoration: none;
+}
+.credit a:hover {
+  color: #1dbf73;
+}
+.credit a:hover:after {
+  font-family: FontAwesome;
+  content: "\f08e";
+  font-size: 9pt;
+  position: absolute;
+  margin: 3px;
+}
+main {
+  background: #fff;
+  padding: 20px;
+}
+
+article li {
+  color: #444;
+  font-size: 15px;
+  margin-left: 33px;
+  line-height: 1.5;
+  padding: 5px;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article p {
+  padding: 14px;
+  color: #333;
+}
+article p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* myFile content CSS setting */
+div.myteach-card {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 90vw;
+  background-color: #fff !important;
+  border-radius: 0.3rem !important;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+}
+/* left */
+div.myteach-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  border-right: solid #c4c4c4 3px;
+  flex: 1 1 200;
+}
+
+div.myteach-left div.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.myteach-left div.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.myteach-left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 1000rem;
+  margin: 0.5rem;
+}
+
+div.myteach-left p {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 1rem;
+}
+
+div.myteach-left button#active {
+  background: rgba(217, 140, 102, 0.7);
+  color: white;
+}
+
+div.myteach-left button#active a {
+  color: white;
+}
+
+div.myteach-left button {
+  border: none;
+  width: 200px;
+  height: 60px;
+  margin: 0.5rem;
+  border: 1px solid rgba(217, 140, 102, 0.7);
+  background: white;
+  border-radius: 30px;
+  color: rgba(217, 140, 102, 0.7);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+div.myteach-left button a {
+  color: rgba(217, 140, 102, 0.7);
+}
+
+div.myteach-left button:hover {
+  background: rgba(217, 140, 102, 0.2);
+}
+/* right */
+div.myteach-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 65%;
+  margin: 2rem;
+  flex: 3 1 400;
+}
+
+div.myteach-right p.title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+div.myteach-right div.rightBox {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 65vh;
+  padding-right: 4rem;
+  overflow: scroll;
+}
+
+div.myteach-right form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+div.myteach-right form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 80%;
+  position: relative;
+}
+
+div.myteach-right form label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 0.25rem;
+}
+
+div.myteach-right form input::placeholder {
+  color: #a73800;
+}
+
+div.myteach-right form input {
+  height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0.5rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+div.myteach-right form button {
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+div.myteach-right form div.main-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.myteach-right form div.main-button button {
+  position: static;
+  margin: 1rem 2rem;
+  width: 110px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+div.myteach-right form div.main-button button.save {
+  color: white;
+  background: rgba(217, 140, 102, 0.7);
+  border-radius: 10px;
+}
+
+div.myteach-right form div.main-button button.cancel {
+  color: #d98c66;
+  background: white;
+  border: 1px solid #d98c66;
+  border-radius: 10px;
+}
+
+div.myteach-right form div.main-button button.save:hover {
+  background: rgba(213, 170, 149, 0.7);
+}
+
+div.myteach-right form div.main-button button.cancel:hover {
+  background: rgba(217, 140, 102, 0.2);
+}
+
+@media only screen and (min-width: 720px) {
+  main {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+  }
+}
+
+.set-overlayer,
+.set-glass,
+.set-sticky {
+  cursor: pointer;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
+  color: #333;
+  font-size: 16px;
+}
+.set-overlayer:after,
+.set-glass:after,
+.to-active:after,
+.set-sticky:after {
+  font-family: FontAwesome;
+  font-size: 18pt;
+  position: relative;
+  float: right;
+}
+.set-overlayer:after,
+.set-glass:after,
+.set-sticky:after {
+  content: "\f204";
+  transition: 0.6s;
+}
+
+.to-active:after {
+  content: "\f205";
+  color: #008080;
+  transition: 0.6s;
+}
+.set-overlayer,
+.set-glass,
+.set-sticky,
+.source,
+.theme-tray {
+  margin: 10px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+  box-sizing: border-box;
+}
+/* Syntax Highlighter*/
+
+pre.prettyprint {
+  padding: 15px !important;
+  margin: 10px;
+  border: 0 !important;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.source {
+  white-space: pre;
+  overflow: auto;
+  max-height: 400px;
+}
+code {
+  border: 1px solid #ddd;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+}
+/* myTeaching content CSS setting */
+@media (max-width: 1120px) {
+  div.myteach-right div.rightBox {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 950px) {
+  div.myteach-card {
+    width: 85vw;
+  }
+  div.myteach-left {
+    width: 30%;
+    margin: 0rem 1rem;
+    padding: 4rem 1rem;
+  }
+  div.myteach-left img {
+    width: 120px;
+    height: 120px;
+  }
+  div.myteach-left p {
+    font-size: 24px;
+  }
+  div.myteach-left button {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
+  div.myteach-right {
+    width: 70%;
+  }
+  div.myteach-right p.title {
+    font-size: 24px;
+  }
+  div.myteach-right div.rightBox {
+    width: 100%;
+    height: 70vh;
+  }
+  div.myteach-right form div {
+    width: 90%;
+  }
+  div.myteach-right form label {
+    font-size: 16px;
+  }
+  div.myteach-right form input {
+    height: 35px;
+    font-size: 16px;
+  }
+  div.myteach-right form button {
+    top: 33px;
+    right: 10px;
+  }
+  div.myteach-right form div.main-button button {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+/* for ipad */
+@media (max-width: 850px) {
+  div.myteach-left {
+    padding: 1rem 1rem;
+  }
+  div.myteach-left p {
+    font-size: 20px;
+  }
+  div.myteach-right div.rightBox {
+    height: 45vh;
+  }
+}
+@media (max-width: 720px) {
+  div.myteach-card {
+    width: 92vw;
+  }
+  div.myteach-right div.rightBox {
+    height: 62vh;
+  }
+}
+/* for phone */
+@media (max-width: 450px) {
+  div.myteach-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: none;
+    box-shadow: none;
+  }
+  div.myteach-left {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem 0rem 1rem 0rem;
+    border-right: none;
+    border-bottom: solid #c4c4c4 3px;
+  }
+  div.myteach-left div.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  div.myteach-left div.bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  div.myteach-left button#active {
+    background: white;
+  }
+
+  div.myteach-left button#active a {
+    color: rgba(217, 140, 102, 0.7);
+  }
+
+  div.myteach-left button {
+    width: 64px;
+    height: 19px;
+    margin: 0.5rem;
+    border: none;
+    background: white;
+    border-radius: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  div.myteach-left button a {
+    color: black;
+  }
+
+  div.myteach-left button.sign-out {
+    width: 55px;
+    height: 21px;
+    color: white;
+    background-color: rgba(217, 140, 102, 0.7);
+  }
+
+  div.myteach-left button.sign-out a {
+    color: white;
+  }
+
+  div.myteach-left button.sign-out:hover {
+    border: 1px solid rgba(217, 140, 102, 0.7);
+    background: rgba(217, 140, 102, 0.2);
+    color: #d98c66;
+  }
+
+  div.myteach-left button.sign-out:hover a {
+    color: #d98c66;
+  }
+
+  div.myteach-left button:hover {
+    background: none;
+    color: rgba(217, 140, 102, 0.7);
+  }
+
+  div.myteach-left button:hover a {
+    color: rgba(217, 140, 102, 0.7);
+  }
+
+  div.myteach-right {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  div.myteach-right p.title {
+    font-size: 0px;
+    margin-bottom: 0rem;
+  }
+  div.myteach-right div.rightBox {
+    width: 100%;
+    height: 100vh;
+    padding-right: 0rem;
+    overflow: none;
+  }
+  div.myteach-right form {
+    align-items: center;
+    margin-left: 0rem;
+  }
+  div.myteach-right form div {
+    width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  div.myteach-left button {
+    margin: 0.25rem;
+  }
+}
+
+.card {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img-card {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  display: block;
+  overflow: hidden;
+}
+.img-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.25s ease;
+}
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+.card-title {
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #d4d4d4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex-grow: 2;
+
+  /* Try to resize window < 600px */
+  min-width: 200px;
+
+  /* Below is not important */
+  margin: 15px;
+  min-height: 50vh;
+  background-color: pink;
+}

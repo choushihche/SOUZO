@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/teaching_board.css" rel="stylesheet" type="text/css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container padtitle">
+          <h1 class="bigTitle">SOUZO圓形貼紙從這裡開始測試20個字</h1>
+          <div class="smalltitleBar mobileStyle">
+            <p class="smalltitle">
+              <span>剪貼紙藝品類</span> &nbsp <span>SOUZO官方</span>
+            </p>
+            <p class="smalltitle">
+              <span>2022</span>年 <span>08</span>月 <span>11</span>日
+            </p>
+          </div>
+          <div class="pad_page" id="infoBtns">
+            <span class="info information info_active">資訊</span
+            ><span class="info step_info">步驟</span>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="container">
+          <div class="topbox">
+            <h1 class="bigTitle">SOUZO圓形貼紙從這裡開始測試20個字</h1>
+          </div>
+          <div class="leftBar">
+            <div class="smalltitleBar comAndPad">
+              <p class="smalltitle">
+                <span>剪貼紙藝品類</span> &nbsp <span>SOUZO官方</span>
+              </p>
+              <p class="smalltitle">
+                <span>2022</span>年 <span>08</span>月 <span>11</span>日
+              </p>
+            </div>
+            <div>
+              <div class="coverPic"><img src="img/souzo1.JPG" alt="" /></div>
+              <div class="actionBar">
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_collect"
+                        id="check_collect"
+                      />
+                      <span class="checkcollect_span"
+                        ><i class="fa-regular fa-bookmark"></i
+                      ></span>
+                    </label>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-share shareIt"></i>
+                  </li>
+                </ul>
+                <div class="tags">
+                  標籤：
+                  <span>SOUZO官方</span>
+                  <span>隨意貼</span>
+                  <span>易上手SoEasy</span>
+                  <span>SOUZO官方</span>
+                  <span>隨意貼</span>
+                  <span>易上手SoEasy</span>
+                </div>
+                <div class="actionNum">
+                  <span>5</span>個愛心 &nbsp <span>66</span>收藏 &nbsp
+                  <span>20</span>人上傳成品
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+            <p class="detail">
+              「只要你想要，沒有什麼做不到！」<br /><br />
+              雖然這裡並不是每個人都是專業的，但在這裡我們每個人都對手作抱有極大的熱情。只要你抱持著這份熱情，你可以做出屬於自己的作品也可以分享自己的經驗！在這裡，只要你想要，沒有什麼做不到！<br />
+              「SOUZO」為手作人提供一個專屬平台，教學文章統一格式更方便瀏覽，也彙整了在做手作時需要的資訊，讓手作人不需要再花時間和心力一一收集整理，減少前期準備手作的時間！
+            </p>
+            <video
+              class="videoLook"
+              src="SOUZO.mp4"
+              controls
+              muted
+              autoplay
+            ></video>
+            <div class="materialLook">
+              <h2>材料</h2>
+              <ul>
+                <li>
+                  <div class="materialbox">
+                    <div class="material1">對手作的熱情</div>
+                    <div class="material2">許多</div>
+                    <div class="material3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                  <div class="materialbox">
+                    <div class="material1">靈巧的雙手</div>
+                    <div class="material2">1雙</div>
+                    <div class="material3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="toolLook">
+              <h2>工具</h2>
+              <ul>
+                <li>
+                  <div class="toolbox">
+                    <div class="tool1">SOUZO會員帳號</div>
+                    <div class="tool2">1串字</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                  <div class="toolbox">
+                    <div class="tool1">SOUZO會員密碼</div>
+                    <div class="tool2">1串字</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="toolbox">
+                    <div class="tool1">SOUZO官方網頁</div>
+                    <div class="tool2">1個</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                  <div class="toolbox">
+                    <div class="tool1">SOUZO新手禮包</div>
+                    <div class="tool2">1包</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="toolbox">
+                    <div class="tool1">你的鍵盤</div>
+                    <div class="tool2">1個</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                  <div class="toolbox">
+                    <div class="tool1">你的滑鼠</div>
+                    <div class="tool2">1個</div>
+                    <div class="tool3">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <form action="" method="get" class="messages">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="留言..."
+              ></textarea>
+              <div class="msgBtn">
+                <i class="fa-solid fa-camera-retro"></i>
+                <i class="fa-solid fa-video"></i>
+                <div class="twoBtn">
+                  <button class="noMsg" type="reset">取消</button>
+                  <button class="sendMsg" type="submit">送出</button>
+                </div>
+              </div>
+            </form>
+            <div class="msgBoard">
+              <h2>留言板 <span>(共3則)</span></h2>
+              <ul>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">SOUZO黃金VIP會員</p>
+                      <p class="memberMsg">留言留起來！</p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">---SOUZO---</p>
+                      <p class="memberMsg">喜歡👍👍👍</p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">SOUZO忠實粉絲</p>
+                      <p class="memberMsg">
+                        留言言言言言言言言言言！<br />要兩行~
+                      </p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rightBar">
+            <h2 class="rightTitle">步驟</h2>
+            <div class="stepRow">
+              <div class="stepdetail">
+                <div class="stepnum"><span>1</span></div>
+              </div>
+              <ul>
+                <li><img src="img/souzo4.JPG" alt="" /></li>
+                <li><img src="img/souzo7.JPG" alt="" /></li>
+                <li><img src="img/souzo3.JPG" alt="" /></li>
+              </ul>
+              <p class="s_content">
+                「只要你想要，沒有什麼做不到！」<br /><br />
+                雖然這裡並不是每個人都是專業的，但在這裡我們每個人都對手作抱有極大的熱情。只要你抱持著這份熱情，你可以做出屬於自己的作品也可以分享自己的經驗！在這裡，只要你想要，沒有什麼做不到！<br /><br />「SOUZO」為手作人提供一個專屬平台，教學文章統一格式更方便瀏覽，也彙整了在做手作時需要的資訊，讓手作人不需要再花時間和心力一一收集整理，減少前期準備手作的時間！
+              </p>
+              <div class="clear"></div>
+            </div>
+            <div class="stepRow">
+              <div class="stepdetail">
+                <div class="stepnum"><span>2</span></div>
+              </div>
+              <ul>
+                <li><img src="img/souzo2.JPG" alt="" /></li>
+              </ul>
+              <p class="s_content">
+                「只要你想要，沒有什麼做不到！」<br /><br />
+                雖然這裡並不是每個人都是專業的，但在這裡我們每個人都對手作抱有極大的熱情。只要你抱持著這份熱情，你可以做出屬於自己的作品也可以分享自己的經驗！在這裡，只要你想要，沒有什麼做不到！<br /><br />「SOUZO」為手作人提供一個專屬平台，教學文章統一格式更方便瀏覽，也彙整了在做手作時需要的資訊，讓手作人不需要再花時間和心力一一收集整理，減少前期準備手作的時間！
+              </p>
+              <div class="clear"></div>
+            </div>
+            <div class="stepRow">
+              <div class="stepdetail">
+                <div class="stepnum"><span>3</span></div>
+              </div>
+              <ul>
+                <li><img src="img/2.JPG" alt="" /></li>
+                <li><img src="img/souzo5.JPG" alt="" /></li>
+              </ul>
+              <p class="s_content">
+                「只要你想要，沒有什麼做不到！」<br /><br />
+                雖然這裡並不是每個人都是專業的，但在這裡我們每個人都對手作抱有極大的熱情。只要你抱持著這份熱情，你可以做出屬於自己的作品也可以分享自己的經驗！在這裡，只要你想要，沒有什麼做不到！<br /><br />「SOUZO」為手作人提供一個專屬平台，教學文章統一格式更方便瀏覽，也彙整了在做手作時需要的資訊，讓手作人不需要再花時間和心力一一收集整理，減少前期準備手作的時間！
+              </p>
+              <div class="clear"></div>
+            </div>
+            <div class="stepRow">
+              <div class="stepdetail">
+                <div class="stepnum"><span>4</span></div>
+              </div>
+              <ul>
+                <li><img src="img/souzo6.JPG" alt="" /></li>
+                <li><img src="img/3.JPG" alt="" /></li>
+                <li><img src="img/1.JPG" alt="" /></li>
+                <li><img src="img/4.JPG" alt="" /></li>
+              </ul>
+              <p class="s_content">
+                「只要你想要，沒有什麼做不到！」<br /><br />
+                雖然這裡並不是每個人都是專業的，但在這裡我們每個人都對手作抱有極大的熱情。只要你抱持著這份熱情，你可以做出屬於自己的作品也可以分享自己的經驗！在這裡，只要你想要，沒有什麼做不到！<br /><br />「SOUZO」為手作人提供一個專屬平台，教學文章統一格式更方便瀏覽，也彙整了在做手作時需要的資訊，讓手作人不需要再花時間和心力一一收集整理，減少前期準備手作的時間！
+              </p>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/teaching_board.js"></script>
+  </body>
+</html>

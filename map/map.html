@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/map.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <select name="choose_type" class="choose_type" id="">
+              <option selected>店家</option>
+              <option>材料</option>
+            </select>
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <select name="choose_type" class="dropchoose_type" id="">
+            <option selected>店家</option>
+            <option>材料</option>
+          </select>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container">
+          <div class="allmap">
+            <div class="allMapList">
+              <div class="insertion-searchbar">
+                <form class="search-bar insert-bar">
+                  <select name="choose_type" class="choose_type" id="">
+                    <option selected>店家</option>
+                    <option>材料</option>
+                  </select>
+                  <input
+                    class="search-input"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button type="submit" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass topicon"></i>
+                  </button>
+                </form>
+              </div>
+
+              <div class="mapList">
+                <div class="choosebar">
+                  <div class="choosebar-flex">
+                    <div class="choosebartext-flex">
+                      <div class="choosebartext">
+                        「<span>附近的材料販售店家</span>」搜尋結果
+                      </div>
+                      <div class="choose">
+                        <ul>
+                          <li>
+                            <input type="checkbox" name="" id="" /> 篩選條件
+                          </li>
+                          <li>
+                            <input type="checkbox" name="" id="" /> 篩選條件
+                          </li>
+                          <li>
+                            <input type="checkbox" name="" id="" /> 篩選條件
+                          </li>
+                          <li>
+                            <input type="checkbox" name="" id="" /> 篩選條件
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="chooseBtn">
+                      <i class="fa-solid fa-sliders"></i> 篩選
+                    </div>
+                  </div>
+                  <!-- <div class="choose">
+                    <ul>
+                      <li><input type="checkbox" name="" id="" /> 篩選條件</li>
+                      <li><input type="checkbox" name="" id="" /> 篩選條件</li>
+                      <li><input type="checkbox" name="" id="" /> 篩選條件</li>
+                      <li><input type="checkbox" name="" id="" /> 篩選條件</li>
+                    </ul>
+                  </div> -->
+                </div>
+                <div class="shopList">
+                  <ul>
+                    <li class="shopList_active">
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <p>良奇書局</p>
+                        <span>台中市西區五權路50號</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="noMore">--- 沒有更多! ---</div>
+              </div>
+              <div id="mapList2" style="left: -100%">
+                <div class="choosebar2">
+                  <i class="fa-solid fa-angle-left"></i
+                  ><span class="choosebartext2"
+                    >「<span>附近的材料販售店家</span>」搜尋結果</span
+                  >
+                </div>
+                <div class="shopList2">
+                  <ul>
+                    <li class="shopList_active">
+                      <div class="shopCapital"><span>良</span></div>
+                      <div class="shopDetail">
+                        <div class="shopIntro">
+                          <p>良奇書局</p>
+                          <span>台中市西區五權路50號</span>
+                        </div>
+                        <div class="shopIntro-Icon">
+                          <div class="info">
+                            <i class="fa-solid fa-circle-info fa-2x"></i>
+                          </div>
+                          <div class="location">
+                            <i class="fa-solid fa-location-dot fa-2x"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="saleWhat">
+                  <div class="page1">
+                    <p>已知販售材料</p>
+                    <form class="search-product">
+                      <input
+                        class="searchp-input"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <button type="submit" class="searchp-btn">
+                        <i class="fa-solid fa-magnifying-glass topicon"></i>
+                      </button>
+                      <div class="clear"></div>
+                    </form>
+                    <table class="allproduct">
+                      <tr class="productTable">
+                        <td><div>剪刀</div></td>
+                        <td><div>白膠</div></td>
+                        <td><div>雙面膠</div></td>
+                        <td><div>雲彩紙</div></td>
+                        <td><div>美工刀</div></td>
+                        <td><div>麥克筆</div></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="page2">
+                    <div class="mapBox">Map Here</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mapBox">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.828841705966!2d120.66995291398153!3d24.142648279597513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d74a3cc6029%3A0xc81df603b4737da5!2z5ZyL56uL6Ie65Lit5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1671003678636!5m2!1szh-TW!2stw"
+                width="800"
+                height="550"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>

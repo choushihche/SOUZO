@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/allType.css" rel="stylesheet" type="text/css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container">
+          <div class="alltypeBox">
+            <div class="bigTitle">所有看板分類</div>
+            <ul class="checkfollow">
+              <a href="../favor/favor.html"
+                ><li>
+                  剪貼紙藝品類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_1"
+                      id="check_follow_1"
+                    />
+                    <span class="check_span1">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  裁縫毛線織布類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_2"
+                      id="check_follow_2"
+                    />
+                    <span class="check_span2">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  羊毛氈類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_3"
+                      id="check_follow_3"
+                    />
+                    <span class="check_span3">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  UV還氧樹脂類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_4"
+                      id="check_follow_4"
+                    />
+                    <span class="check_span4">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  木工竹藝類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_5"
+                      id="check_follow_5"
+                    />
+                    <span class="check_span5">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  絹印手染布類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_6"
+                      id="check_follow_6"
+                    />
+                    <span class="check_span6">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  陶藝黏土玻璃類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_7"
+                      id="check_follow_7"
+                    />
+                    <span class="check_span7">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  拼豆串珠類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_8"
+                      id="check_follow_8"
+                    />
+                    <span class="check_span8">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  皮革皮件類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_9"
+                      id="check_follow_9"
+                    />
+                    <span class="check_span9">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  金工類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_10"
+                      id="check_follow_10"
+                    />
+                    <span class="check_span10">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  模型類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_11"
+                      id="check_follow_11"
+                    />
+                    <span class="check_span11">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  傳統工藝類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_12"
+                      id="check_follow_12"
+                    />
+                    <span class="check_span12">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  肥皂精油蠟燭類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_13"
+                      id="check_follow_13"
+                    />
+                    <span class="check_span13">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  生活用品類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_14"
+                      id="check_follow_14"
+                    />
+                    <span class="check_span14">追蹤</span>
+                  </label>
+                </li></a
+              >
+              <a href="../favor/favor.html"
+                ><li>
+                  其他類
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="check_follow_15"
+                      id="check_follow_15"
+                    />
+                    <span class="check_span15">追蹤</span>
+                  </label>
+                </li></a
+              >
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/allType.js"></script>
+  </body>
+</html>

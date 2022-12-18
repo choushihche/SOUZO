@@ -1,0 +1,555 @@
+.topbox{
+    width: 100%;
+}
+.bigTitle{
+    padding-left: 10px;
+    width: 100%;
+    float: left;
+    height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+}
+.pad_page span{
+    margin-left: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.info_active{
+    color: #D98C66;
+    font-weight: 400;
+}
+.leftBar, .rightBar{
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    height:1000px;
+    float: left;
+    overflow: auto;
+    padding: 0 10px;
+    padding-bottom: 80px;
+}
+.rightBar{
+    /* background-color: bisque; */
+    float: right;
+}
+.smalltitleBar{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.smalltitle{
+    font-size: 14px;
+    color: #C4C4C4;
+    margin-bottom: 5px;
+}
+.coverPic{
+    width: 525px;
+    height: 350px;
+    background: #f1f1f1;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.coverPic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.actionBar {
+    /* height: 170px; */
+    /* width: calc(100% - 270px); */
+    float: left;
+    padding-top: 30px;
+    /* padding-left: 40px; */
+    /* background-color: #e9feff; */
+}
+.actionBar ul {
+    margin-bottom: 40px;
+}
+.actionBar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.actionBar a img {
+    width: 30px;
+}
+.apply span{
+    background-color: #D98C66;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.apply span:hover{
+    background-color: #D9D9D9;
+    color: #D98C66;
+    font-weight: 600;
+}
+.actionBar ul li label {
+    padding: 0;
+    cursor: pointer;
+}
+.actionBar ul li label input[type=checkbox] {
+    display: none;
+}
+.actionBar ul li label input[type=checkbox]+span {
+    display: inline-block;
+    text-align: center;
+    color: #D98C66;
+    user-select: none; /* 防止文字被滑鼠選取反白 */
+}
+.actionBar ul li label input[type=checkbox]:checked+span {
+    color: #da0000;
+}
+.actionBar ul li label span i{
+    font-size: 24px;
+}
+.actionBar .shareIt{
+    font-size: 24px;
+    color: #D98C66;
+    cursor: pointer;
+}
+.tags {
+    font-weight: 400;
+}
+.tags span {
+    position: relative;
+    padding: 3px 10px 3px 22px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background-color: #D98C66;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+}
+.tags span::before {
+    content: "#";
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.actionNum{
+    font-weight: 400;
+}
+.detail{
+    padding: 20px 10px 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+}
+.videoLook{
+    width: 95%;
+    margin-top: 40px;
+}
+.leftBar h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.materialLook ul, .toolLook ul{
+    border-top: #000000 1px solid;
+    margin-bottom: 20px;
+}
+.materialLook ul li, .toolLook ul li{
+    border-bottom: #000000 1px solid;
+    padding: 15px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.materialLook ul li div, .toolLook ul li div{
+    float: left;
+    width: 50%;
+    /* background-color: #C4C4C4; */
+    font-size: 16px;
+}
+.materialLook .material1, .toolLook .tool1{
+    width: 60%;
+    float: left;
+    padding-right: 10px;
+}
+.materialLook .material2, .toolLook .tool2{
+    width: 20%;
+    float: left;
+}
+.materialLook .material3, .toolLook .tool3{
+    width: 20%;
+    float: left;
+}
+.materialLook ul li div i, .toolLook ul li div i{
+    width: 10%;
+    color: #D98C66;
+    font-size: 16px;
+    cursor: pointer;
+}
+.messages{
+    background-color: #fff;
+    border: #C4C4C4 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.messages textarea{
+    width: 100%;
+    height: 80px;
+    padding: 10px 15px;
+    resize: none;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 0;
+}
+.msgBtn{
+    /* background-color: #f1f1f1; */
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.twoBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.msgBtn i{
+    font-size: 24px;
+    color: #444444;
+    margin-right: 15px;
+    transition: .6s ease;
+}
+.msgBtn i:hover{
+    color: #D98C66;
+    cursor: pointer;
+}
+.noMsg{
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 1px solid #D98C66;
+    border-radius: 5px;
+    color: #D98C66;
+    font-weight: 900;
+    transition: .6s ease;
+}
+.sendMsg{
+    padding: 5px 15px;
+    margin-left: 5px;
+    border: 1px solid #D98C66;
+    border-radius: 5px;
+    font-weight: 900;
+    transition: .6s ease;
+    background-color: #D98C66;
+    color: #fff;
+}
+.noMsg:hover{
+    background-color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    color: #fff;
+    cursor: pointer;
+}
+.sendMsg:hover{
+    background-color: #d85858;
+    border: 1px solid #d85858;
+    cursor: pointer;
+}
+.msgBoard h2 span{
+    font-size: 18px;
+}
+.msgBoard ul li{
+    display: inline-block;
+    width: 100%;
+    border-bottom: #444444 1px solid;
+}
+.msgDetail{
+    position: relative;
+    font-size: 14px;
+    padding: 15px 15px 15px 70px;
+}
+.usericon{
+    font-size: 30px;
+    position: absolute;
+    left: 25px;
+}
+.memberName{
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.memberMsg{
+    font-weight: 400;
+}
+.msgDetail label {
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 95%;
+    font-size: 20px;
+}
+.msgDetail label input[type=checkbox] {
+    display: none;
+}
+.msgDetail label input[type=checkbox]+span {
+    color: #444444;
+    user-select: none; /* 防止文字被滑鼠選取反白 */
+}
+.msgDetail label input[type=checkbox]:checked+span {
+    color: #D98C66;
+}
+
+table{
+    margin: 20px;
+}
+td {
+    border-bottom: 10px solid transparent;
+}
+.classdetail-type{
+    width: 120px;
+
+}
+.classdetail{
+    font-weight: 400;
+}
+
+
+.disappear{
+    display: none!important;
+}
+.appear{
+    display: block!important;
+}
+
+.padtitle{
+    position: fixed;
+    margin-top: 0!important;
+    padding-bottom: 20px!important;
+    z-index: 10;
+    display: none;
+}
+
+
+.mobileStyle{
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 152px;
+    float: left;
+    display: none;
+}
+
+.web-classdetail{
+    display: block;
+}
+.pad-classdetail{
+    display: none;
+}
+
+
+@media (max-width: 1400px) {
+    .padtitle{
+        display: block;
+        box-shadow: 1px 1px 3px #f1f1f1;
+    }
+    .topbox{
+        display: none;
+    }
+    .bigTitle{
+        display: block;
+    }
+    .leftBar, .rightBar{
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+    }
+    .leftBar{
+        padding-bottom: 20px;
+    }
+    .rightBar{
+        margin-top: 20px;
+    }
+    .actionBar{
+        padding-bottom: 20px;
+    }
+    .detail {
+        display: none;
+    }
+    .coverPic{
+        width: 300px;
+        height: 200px;
+    }
+    .actionBar{
+        float: right;
+        width: calc(100% - 350px);
+    }
+    .web-classdetail{
+        display: none;
+    }
+    .pad-classdetail{
+        display: block;
+    }
+    .rightTitle{
+        display: none;
+    }
+    .stepRow ul li {
+        width: 200px;
+        height: 150px;
+    }
+    .s_content {
+        width: calc(100% - 260px);
+    }
+}
+@media (max-width: 1015px) {
+    .coverPic {
+        width: 100%;
+        height: 300px;
+    }
+    .actionBar {
+        float: left;
+        width: 100%;
+    }
+}
+@media (max-width: 720px) {
+    .wrapper.active .main_container .container {
+        padding: 20px;
+    }
+    .leftBar{
+        margin-top: 60px;
+    }
+    .rightBar{
+        margin-top: 120px;
+    }
+    .bigTitle {
+        font-size: 20px;
+        height: 20px;
+        line-height: 20px;
+        width: 100%;
+        padding-left: 0;
+    }
+    .comAndPad{
+        display: none;
+    }
+    .mobileStyle{
+        display: block;
+    }
+    .smalltitle{
+        font-size: 12px;
+    }
+    .pad_page {
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+    .pad_page span {
+        height: 42px;
+        line-height: 42px;
+    }
+    .coverPic {
+        width: 100%;
+        height: 300px;
+        background-color: #fff;
+    }
+    .actionBar {
+        width: 100%;
+        padding-left: 10px;
+    }
+    .actionBar ul {
+        margin-bottom: 20px;
+    }
+    .tags {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .actionNum {
+        font-size: 14px;
+    }
+    .materialLook ul, .toolLook ul {
+        border-top: #D9D9D9 1px solid;
+    }
+    .materialLook ul li, .toolLook ul li {
+        border-bottom: 0;
+        padding: 0;
+    }
+    .materialbox, .toolbox{
+        border-bottom: #D9D9D9 1px solid;
+        padding: 10px 0 !important;
+    }
+    .materialLook ul li div, .toolLook ul li div {
+        width: 100%;
+        padding: 5px 0 ;
+    }
+    .materialLook .material1, .toolLook .tool1 {
+        width: 65%;
+    }
+    .materialLook .material2, .toolLook .tool2 {
+        width: 25%;
+        padding-right: 10px;
+    }
+    .materialLook .material3, .toolLook .tool3 {
+        width: 10%;
+    }
+    .usericon {
+        color: #767676;
+        left: 5px;
+    }
+    .msgBoard ul li {
+        border-bottom: #767676 1px solid;
+    }
+    .msgDetail {
+        padding: 15px 30px 15px 50px;
+    }
+    .msgDetail label {
+        top: 15px;
+        left: 90%;
+    }
+    .stepRow {
+        padding-left: 0px;
+    }
+    .stepnum {
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+    }
+    .stepnum span {
+        line-height: 30px;
+    }
+    .stepRow ul {
+        float: left;
+        width: calc(100% - 60px);
+        height: 160px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .stepRow ul li {
+        display: inline-block;
+        float: none;
+        margin-left: 5px;
+    }
+    .s_content {
+        width: 100%;
+        padding: 10px 5px;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .coverPic {
+        height: 200px;
+    }
+    .actionBar a img {
+        width: 25px;
+    }
+    .actionBar ul li {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 414px) {
+    .coverPic {
+        height: 170px;
+    }
+}

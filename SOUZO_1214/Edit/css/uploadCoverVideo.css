@@ -1,0 +1,84 @@
+.pcoverBox, .pvideoBox{
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+.pcoverBox .pcover,.pvideoBox .pvideo{
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed #d98c66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pcover.active, .pvideo.active{
+  border: solid #d98c66;
+}
+.pcover .image,.pvideo .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pcover img,.pvideo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.pcover .icon,.pvideo .icon{
+  font-size: 50px;
+  color: #d98c66;
+  text-align: center;
+}
+.pcover .text,.pvideo .text{
+  font-size: 20px;
+  font-weight: 600;
+  color: #d98c66;
+}
+.pcover #cancel-btn i,.pvideo #videocancel-btn i{
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #d98c66;
+  cursor: pointer;
+  display: none;
+}
+.pcover.active #cancel-btn i,.pvideo.active #videocancel-btn i{
+  display: block;
+}
+.pcover #cancel-btn i:hover,.pvideo #videocancel-btn i:hover{
+  color: #e74c3c;
+}
+.pcover .coverFile,.pvideo .videoFile{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pcover.active .coverFile,.pvideo.active .videoFile{
+  display: block;
+}
+
+
+@media (max-width: 952px) {
+  .pcoverBox, .pvideoBox {
+    height: 150px;
+  }
+  .pcoverBox .pcover, .pvideoBox .pvideo{
+    height: 150px;
+  }
+}

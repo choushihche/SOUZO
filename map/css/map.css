@@ -1,0 +1,408 @@
+.choose_type {
+  border: 1px solid #d98c66;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin-right: 10px;
+  outline: none;
+  transition: 0.6s ease;
+}
+.dropchoose_type {
+  background-color: transparent;
+  border: none;
+  border-bottom: #d98c66 1px solid;
+  color: #d98c66;
+  padding: 7px 10px;
+  margin-right: 10px;
+  outline: none;
+  transition: 0.6s ease;
+}
+.wrapper.active .main_container .container {
+  padding: 0;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  position: fixed;
+}
+.main_container .container {
+  padding: 0;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 9995;
+}
+.allmap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.allMapList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+}
+
+.allMapList .insertion-searchbar {
+  margin: 20px;
+  display: none;
+}
+
+.allMapList .insertion-searchbar .search-bar {
+  margin: 0rem;
+}
+
+.mapList {
+  float: left;
+  overflow: auto;
+  padding-bottom: 65px;
+  /* background-color: #f6ac66; */
+}
+.choosebar {
+  padding: 20px;
+  border-bottom: #f1f1f1 1px solid;
+}
+
+.choosebar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choosebartext-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+
+.choosebartext {
+  line-height: 34px;
+  width: 100%;
+
+  animation: slide 0.6s ease;
+}
+.chooseBtn {
+  color: #d98c66;
+  font-size: 14px;
+  padding: 5px;
+  border: solid 1px #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  transition: 0.6s ease;
+  float: right;
+
+  width: 30%;
+  margin: 0rem 0.5rem;
+}
+.chooseBtn:hover {
+  color: #fff;
+  border: solid 1px #d98c66;
+  background-color: #d98c66;
+  cursor: pointer;
+}
+.choose {
+  width: 100%;
+  display: none;
+
+  animation: slide 0.6s ease;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.choose ul {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+.choose ul li {
+  display: inline-block;
+  color: #d98c66;
+  box-sizing: border-box;
+  margin: 0.25rem;
+  padding-right: 5px;
+  font-weight: 600;
+}
+.shopList ul {
+  width: 100%;
+}
+.shopList ul li {
+  box-sizing: border-box;
+  padding: 20px;
+  border-bottom: #f1f1f1 1px solid;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+.shopList ul li:hover {
+  background-color: #f1f1f1;
+}
+.shopList_active {
+  background-color: rgba(217, 140, 102, 0.1);
+  border-left: #d98c66 5px solid;
+}
+.shopCapital {
+  background-color: #d98c66;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  opacity: 0.7;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.shopDetail {
+  margin-left: 50px;
+  height: 50px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.shopDetail p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.shopDetail span {
+  font-size: 16px;
+  color: #767676;
+  font-weight: 400;
+}
+.noMore {
+  text-align: center;
+  color: #c4c4c4;
+  padding: 30px 0;
+}
+
+#mapList2 {
+  width: 30%;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 65px;
+  background-color: #fff;
+  position: absolute;
+  transition: 0.8s ease;
+}
+.choosebar2 {
+  padding: 20px;
+  border-bottom: #f1f1f1 1px solid;
+}
+.choosebar2 i {
+  font-size: 18px;
+  color: #767676;
+}
+.choosebartext2 {
+  line-height: 34px;
+}
+.choosebar2:hover {
+  color: #d98c66;
+  cursor: pointer;
+}
+.shopList2 ul {
+  width: 100%;
+}
+.shopList2 ul li {
+  box-sizing: border-box;
+  padding: 20px;
+  border-bottom: #f1f1f1 1px solid;
+  position: relative;
+  width: 100%;
+}
+
+.shopList2_active {
+  background-color: rgba(217, 140, 102, 0.1);
+  border-left: #d98c66 5px solid;
+}
+
+.shopList2 div.shopDetail {
+  display: flex;
+  align-items: center;
+}
+
+.shopList2 div.shopDetail div.shopIntro {
+  width: 100%;
+}
+
+.shopList2 div.shopDetail div.shopIntro-Icon {
+  display: flex;
+  margin: 0rem 0.5rem;
+  vertical-align: middle;
+
+  display: none;
+}
+
+.shopList2 div.shopDetail div.shopIntro-Icon .info i {
+  color: #d98c66;
+  margin: 0rem 0.5rem;
+  cursor: pointer;
+}
+
+.shopList2 div.shopDetail div.shopIntro-Icon .location i {
+  color: #d98c667a;
+  margin: 0rem 0.5rem;
+  cursor: pointer;
+}
+
+.shopList2 div.shopDetail div.shopIntro-Icon .info i:hover {
+  color: #d98c66;
+}
+
+.shopList2 div.shopDetail div.shopIntro-Icon .location i:hover {
+  color: #d98c66;
+}
+
+.saleWhat {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.saleWhat div.page2 .mapBox {
+  width: 100%;
+  height: 100vh;
+  float: none;
+  background-color: #f6e066;
+  padding-bottom: 65px;
+}
+
+.search-product {
+  margin: 20px auto;
+  width: 50%;
+}
+.searchp-input {
+  width: 75%;
+  font-size: inherit;
+  padding: 0.4em;
+  border-left: 1px solid #d98c66;
+  border-right: none;
+  border-top: 1px solid #d98c66;
+  border-bottom: 1px solid #d98c66;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  float: left;
+
+  height: 30px;
+}
+.searchp-btn {
+  width: 25%;
+  float: left;
+  align-items: center;
+  padding: 7px 0px;
+  background-color: #fff;
+  border-left: none;
+  border: 1px solid #d98c66;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+
+  height: 30px;
+}
+.searchp-btn:hover {
+  background-color: #f1f1f1;
+}
+/* --清除IE下的 search 叉号 */
+.searchp-input::-ms-clear {
+  display: none;
+}
+/* --清除谷歌浏览器下的 search 叉号 */
+.searchp-input::-webkit-search-cancel-button {
+  display: none;
+}
+.allproduct {
+  margin: 0 auto;
+}
+.productTable {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.productTable td div {
+  background-color: rgba(217, 140, 102, 0.5);
+  color: #000;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.mapBox {
+  width: 70%;
+  height: 100%;
+  float: right;
+  background-color: #f6e066;
+  padding-bottom: 65px;
+}
+
+@media (max-width: 960px) {
+  .allMapList {
+    width: 100%;
+  }
+  .choosebartext-flex {
+    width: 60%;
+    justify-content: center;
+  }
+  .choosebartext {
+    text-align: center;
+    width: 100%;
+  }
+  .chooseBtn {
+    width: 20%;
+  }
+  .allMapList .insertion-searchbar {
+    display: block;
+  }
+  .shopList2 div.shopDetail div.shopIntro-Icon {
+    display: flex;
+  }
+  /* .saleWhat div.page2 .mapBox {
+    width: 100%;
+    height: 100vh;
+    float: none;
+    background-color: #f6e066;
+    padding-bottom: 65px;
+  } */
+  .productTable {
+    justify-content: center;
+    margin: 0rem 4rem;
+  }
+  .productTable td {
+    margin: 0.5rem;
+  }
+  .mapBox {
+    display: none;
+  }
+  #mapList2 {
+    width: 100%;
+  }
+  div.menu form.search-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .allMapList .insertion-searchbar .insert-bar {
+    display: flex;
+  }
+  .productTable {
+    margin: 0rem 2rem;
+  }
+}

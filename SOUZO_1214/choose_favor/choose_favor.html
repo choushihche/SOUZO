@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> SOUZO</title>
+
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- SideBar-Menu CSS -->
+  <link rel="stylesheet" href="../sameCSS/styles.css">
+  <link rel="stylesheet" href="css/choose_favor.css">
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body >
+  
+  <div class="wrapper">
+    <div class="mobileMenu">
+      <ul>
+        <li>
+          <a href="../home/home.html"
+            ><i class="fa-solid fa-house"></i><span>首頁</span></a
+          >
+        </li>
+        <li>
+          <a href="../all_type/all_type.html"
+            ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+          >
+        </li>
+        <li>
+          <a href="../myCollect/myCollect.html"
+            ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+          >
+        </li>
+        <li>
+          <a href="../map/map.html"
+            ><i class="fa-solid fa-map"></i><span>地圖</span></a
+          >
+        </li>
+        <li>
+          <a href="../allclass/allclass.html"
+            ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+          >
+        </li>
+        <li>
+          <a href="../myTeaching/myTeaching.html"
+            ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="hamburger__inner">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="logo">
+          <a href="../home/home.html"><img src="../sameCSS/logo2.png" alt=""></a>
+        </div>
+        <form class="search-bar">
+          <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+        <div class="menu-icons">
+          <div class="mobileSearch" onclick="openAndClose()"><i class="fa-solid fa-magnifying-glass topicon"></i></div>
+          <a href="../Edit/Edit.html"><i class="fa-regular fa-square-plus topicon2"></i></a>
+          <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+          <a href="../myDraft/myDraft.html" class="top_person"><img class="menu-channel-icon" src="http:///unsplash.it/36/36?gravity=center" alt="Your Channel" /></a>
+        </div>
+      </div>
+    </div>
+    <div id="mSearch_drop" style="top: -100%;">
+      <form class="search-bar2">
+        <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+        <button type="submit" class="search-btn">
+          <i class="fa-solid fa-magnifying-glass topicon"></i>
+        </button>
+      </form>
+    </div>
+      
+    <div class="main_container">
+      <div class="sidebar">
+        <div class="sidebar__inner">
+          <div class="profile hello">
+          <div class="img">
+            <img class="welcome_headimg" src="http:///unsplash.it/36/36?gravity=center" alt="profile_pic">
+          </div>
+          <div class="profile_info">
+            <p>Welcome</p>
+            <p class="profile_name">SOUZO USER</p> <!-- 用戶名稱-->
+          </div>
+          </div>
+          <ul>
+            <li>
+              <a href="../home/home.html" > <!-- class="active" -->
+              <span class="icon"><i class="fa-solid fa-house"></i></span>  <!-- home icon class-->
+              <span class="title">首頁</span>
+              </a>
+            </li>
+            <li>
+              <a href="../myCollect/myCollect.html">
+              <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+              <span class="title">你的收藏</span>
+              </a>
+            </li>
+            <li>
+              <a href="../map/map.html">
+              <span class="icon"><i class="fa-solid fa-map"></i></span>
+              <span class="title">手作地圖</span>
+              </a>
+            </li>
+            <li>
+              <a href="../allclass/allclass.html">
+              <span class="icon"><i class="fa-solid fa-clipboard-list"></i></span>
+              <span class="title">手作課程</span>
+              </a>
+            </li>
+            <li>
+              <a href="../all_type/all_type.html">
+              <span class="icon"><i class="fa-solid fa-rectangle-list"></i></span>
+              <span class="title">所有看板</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <hr class="sidebar_hr">
+        <p class="follow">追蹤<span>內容</span></p>
+        <div class="profile" id="profile">
+          <div class="img">
+            <img src="img/plus_favor.png" alt="" style="border-radius: 50%;">
+          </div>
+          <div class="profile_info">
+             <p class="profile_name">添加追蹤</p> <!-- 追蹤內容-->
+          </div>
+        </div>
+        
+        </div>
+      </div>  <!-- left side bar結束-->
+      
+      <div class="login-popup" style="overflow:hidden;">
+        
+        <div class="box">
+          <div class="row">
+                <div class="col">
+                    <div class="mb-3 p-3" style="border-radius: 6px; border: 2px solid white">
+                        <h2 class="whatDoYouLike" style="text-align: center;">你對什麼分類感興趣呢?</h2>
+                        <div class="close">&times;</div>
+                        <label class="image-checkbox">
+                            <img su-media-id="orange" src="img/paper.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/cloth.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="orange" src="img/wood.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/retrofit.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="orange" src="img/bead.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/wool_felt.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="orange" src="img/pottery.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/UV.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/leather.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="orange" src="img/flower.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/soap.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                        <label class="image-checkbox">
+                            <img su-media-id="kiwi" src="img/others.jpg" />
+                            <i class="fa fa-check"></i>
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn" onclick="window.location.href='../home/home.html'">確定</button>                
+          </div>     
+        </div>
+      </div>
+    </div>  
+  </div>
+      
+  <script src="https://kit.fontawesome.com/e4788a2551.js" crossorigin="anonymous"></script>
+  <script src="js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../sameCSS/samejs.js"></script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link rel="stylesheet" href="../sameCSS/styles.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+        <center>
+          <div class="container teachcards">
+            <div class="categories">
+              <section class="category-section" id="btnContainer">
+                <button class="category homebar_active">最新</button>
+                <button class="category">熱門</button>
+                <button class="category">活動</button>
+              </section>
+            </div>
+            <div class="allcards">
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach1.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">
+                      UV飾品 UV飾品 UV飾品 UV飾品 UV飾品 UV飾品
+                    </h3>
+                  </a>
+                  <div class="card_detail">
+                    用UV膠製作精美飾品！超精緻手工飾品，創造獨一無二的專屬飾品！用UV膠製作精美飾品！超精緻手工飾品，創造獨一無二的專屬飾品！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      就飾要精緻就飾要精緻就飾要精緻就飾要精緻就飾要精緻
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >30000</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>90400</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board2.html">
+                    <img class="cardimg" src="img/teach2.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board2.html">
+                    <h3 class="card_title">大創UV系列-禮物盒耳飾</h3>
+                  </a>
+                  <div class="card_detail">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      凡事都要試一飾
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >23</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>98</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach3.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">可愛童趣旗幟</h3>
+                  </a>
+                  <div class="card_detail">教你怎麼做出可愛的旗幟。</div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      沒有布可能的巧手阿姨
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >101</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>413</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach4.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">蝶谷巴特帆布袋</h3>
+                  </a>
+                  <div class="card_detail">
+                    超簡單！零經驗也可以！一次就上手的蝶谷巴特DIY，做出獨一無二的包包吧！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      蝴蝶巴特FLY
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >897</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>1024</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach5.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">狗狗刺繡</h3>
+                  </a>
+                  <div class="card_detail">
+                    超可愛的狗狗刺繡教學，跟著我一步一步來！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      刺出一場SHOW
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >6</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>88</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach6.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">客製化馬克杯</h3>
+                  </a>
+                  <div class="card_detail">
+                    手把手教你！自己也可以設計自己想要的馬克杯圖案，送禮收藏都超合適！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      手作人飯粒
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >38</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>46</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach1.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">UV飾品</h3>
+                  </a>
+                  <div class="card_detail">
+                    用UV膠製作精美飾品！超精緻手工飾品，創造獨一無二的專屬飾品！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      就飾要精緻
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >30000</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>90400</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board2.html">
+                    <img class="cardimg" src="img/teach2.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board2.html">
+                    <h3 class="card_title">大創UV系列-禮物盒耳飾</h3>
+                  </a>
+                  <div class="card_detail">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      凡事都要試一飾
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >23</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>98</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach3.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">可愛童趣旗幟</h3>
+                  </a>
+                  <div class="card_detail">教你怎麼做出可愛的旗幟。</div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      沒有布可能的巧手阿姨
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >101</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>413</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach4.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">蝶谷巴特帆布袋</h3>
+                  </a>
+                  <div class="card_detail">
+                    超簡單！零經驗也可以！一次就上手的蝶谷巴特DIY，做出獨一無二的包包吧！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      蝴蝶巴特FLY
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >897</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>1024</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach5.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">狗狗刺繡</h3>
+                  </a>
+                  <div class="card_detail">
+                    超可愛的狗狗刺繡教學，跟著我一步一步來！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      刺出一場SHOW
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >6</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>88</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_test">
+                <div class="cardimgBg">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <img class="cardimg" src="img/teach6.png" alt="" />
+                  </a>
+                </div>
+                <div class="card_middle">
+                  <a class="go" href="../teaching_board/teaching_board.html">
+                    <h3 class="card_title">客製化馬克杯</h3>
+                  </a>
+                  <div class="card_detail">
+                    手把手教你！自己也可以設計自己想要的馬克杯圖案，送禮收藏都超合適！
+                  </div>
+                  <div class="card_bottom">
+                    <div class="card_user">
+                      <i class="fa-solid fa-circle-user card_icon"></i>
+                      手作人飯粒
+                    </div>
+                    <div class="card_message">
+                      <span class="card_p"
+                        ><i class="fa-regular fa-comment-dots card_icon2"></i
+                        >38</span
+                      >
+                    </div>
+                    <div class="card_like">
+                      <span class="card_p"
+                        ><i class="fa-solid fa-heart card_icon2"></i>46</span
+                      >
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clear"></div>
+            </div>
+            <!-- 頁碼 -->
+            <ul class="pagination">
+              <li><a class="page" href="#">«</a></li>
+              <li><a class="page_active" href="#">1</a></li>
+              <li><a class="page" href="#">2</a></li>
+              <li><a class="page" href="#">3</a></li>
+              <li><a class="page" href="#">4</a></li>
+              <li><a class="page" href="#">5</a></li>
+              <li><a class="page" href="#">»</a></li>
+            </ul>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

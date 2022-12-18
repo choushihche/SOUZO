@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/collect.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container">
+          <div class="filesSee">
+            <h3>分類收藏</h3>
+            <div class="collectTitle">
+              <span class="addFileCount"><span>10</span>個收藏資料夾</span>
+              <span class="addFile">+ 資料夾</span>
+              <div class="clear"></div>
+            </div>
+            <div class="allFiles">
+              <ul>
+                <a href="">
+                  <li>黏土</li>
+                </a>
+                <a href="">
+                  <li>環氧樹脂</li>
+                </a>
+                <a href="">
+                  <li>改鞋</li>
+                </a>
+                <a href="">
+                  <li>蠟燭</li>
+                </a>
+                <a href="">
+                  <li>假法郎</li>
+                </a>
+                <a href="">
+                  <li>軟陶</li>
+                </a>
+                <a href="">
+                  <li>衣服改造</li>
+                </a>
+                <a href="">
+                  <li>物品改造</li>
+                </a>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+          <div class="rightbox">
+            <h3>
+              其他 &nbsp;&nbsp;<span class="collectCount"
+                ><span>20</span>篇文章</span
+              >
+            </h3>
+            <div class="collectbox">
+              <a href="../teaching_board/teaching_board.html">
+                <div class="collectboxImg">
+                  <img src="./img/image 16.png" alt="" srcset="" />
+                </div>
+                <div class="collectDetail">
+                  <h4>
+                    大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾
+                  </h4>
+                  <p class="detailp1">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </p>
+                  <p class="detailp2">
+                    <i class="fa-regular fa-comment-dots card_icon2"></i
+                    >&nbsp;<span>76</span>&nbsp;&nbsp;&nbsp;<i
+                      class="fa-solid fa-heart card_icon2"
+                    ></i
+                    >&nbsp;<span>43</span>
+                  </p>
+                </div>
+                <div></div>
+              </a>
+            </div>
+            <div class="collectbox">
+              <a href="../teaching_board/teaching_board.html">
+                <div class="collectboxImg">
+                  <img src="./img/image 19.png" alt="" srcset="" />
+                </div>
+                <div class="collectDetail">
+                  <h4>
+                    大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾
+                  </h4>
+                  <p class="detailp1">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </p>
+                  <p class="detailp2">
+                    <i class="fa-regular fa-comment-dots card_icon2"></i
+                    >&nbsp;<span>76</span>&nbsp;&nbsp;&nbsp;<i
+                      class="fa-solid fa-heart card_icon2"
+                    ></i
+                    >&nbsp;<span>43</span>
+                  </p>
+                </div>
+                <div></div>
+              </a>
+            </div>
+            <div class="collectbox">
+              <a href="../teaching_board/teaching_board.html">
+                <div class="collectboxImg">
+                  <img src="./img/Rectangle 57-2.png" alt="" srcset="" />
+                </div>
+                <div class="collectDetail">
+                  <h4>
+                    大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾
+                  </h4>
+                  <p class="detailp1">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </p>
+                  <p class="detailp2">
+                    <i class="fa-regular fa-comment-dots card_icon2"></i
+                    >&nbsp;<span>76</span>&nbsp;&nbsp;&nbsp;<i
+                      class="fa-solid fa-heart card_icon2"
+                    ></i
+                    >&nbsp;<span>43</span>
+                  </p>
+                </div>
+                <div></div>
+              </a>
+            </div>
+            <div class="collectbox">
+              <a href="../teaching_board/teaching_board.html">
+                <div class="collectboxImg">
+                  <img src="./img/Rectangle 57-3.png" alt="" srcset="" />
+                </div>
+                <div class="collectDetail">
+                  <h4>
+                    大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾大創UV系列-禮物盒耳飾
+                  </h4>
+                  <p class="detailp1">
+                    第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。第一次玩UV膠，決定買大創常見的材料包當入門，想玩的朋友可以看看這篇。
+                  </p>
+                  <p class="detailp2">
+                    <i class="fa-regular fa-comment-dots card_icon2"></i
+                    >&nbsp;<span>76</span>&nbsp;&nbsp;&nbsp;<i
+                      class="fa-solid fa-heart card_icon2"
+                    ></i
+                    >&nbsp;<span>43</span>
+                  </p>
+                </div>
+                <div></div>
+              </a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="./js/allclass.js"></script>
+  </body>
+</html>

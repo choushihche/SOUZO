@@ -1,0 +1,488 @@
+.edit_type {
+  width: 100%;
+  /* background-color: burlywood; */
+}
+.edit_type h1 {
+  width: 60%;
+  float: left;
+  /* background-color: rgb(255, 191, 108); */
+}
+.edit_type ul {
+  width: 40%;
+  float: right;
+  display: inline;
+
+  /* background-color: rgb(255, 191, 108); */
+}
+.edit_btn,
+.send {
+  display: inline;
+  padding: 5px 15px;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  float: right;
+  background-color: #fff;
+  border: 2px solid #d98c66;
+  border-radius: 5px;
+  color: #d98c66;
+  font-weight: 900;
+  transition: 0.6s ease;
+}
+.send {
+  background-color: #d98c66;
+  color: #fff;
+}
+.edit_btn:hover {
+  background-color: #d98c66;
+  color: #fff;
+}
+.send:hover {
+  background-color: #d85858;
+  border: 2px solid #d85858;
+}
+
+.edit_left,
+.edit_right {
+  /* width: 809px; */
+  width: 50%;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  height: 1000px;
+  float: left;
+  overflow: auto;
+  padding-bottom: 80px;
+}
+.edit_right {
+  /* background-color: bisque; */
+  float: right;
+}
+.edit1 {
+  height: 32px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.edit_choose_type_title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.edit_choose_type {
+  background-color: #d98c66;
+  border: 2px solid #d98c66;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  outline: none;
+  transition: 0.6s ease;
+}
+.edit_choose_type:hover {
+  background-color: #dd8152;
+  border: 2px solid #dd8152;
+}
+.edit_choose_type option {
+  background-color: #fff;
+  color: #000;
+}
+.edit2,
+.edit3 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 5px;
+  float: left;
+  /* background-color: #669eee; */
+}
+.p1,
+.p2 {
+  width: 100%;
+}
+.preview {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 150px;
+  background: #fbfbfb;
+  text-align: center;
+  border: 2px #d98c66 dashed;
+  border-radius: 8px;
+}
+.preview img[src=""] {
+  opacity: 0;
+  filter: Alpha(0);
+}
+.preview i {
+  color: #d98c66;
+  font-size: 50px;
+  margin-top: 20%;
+}
+.preview p {
+  color: #d98c66;
+  font-size: 16px;
+  font-weight: 600;
+}
+.uploadImage,
+.uploadVideo {
+  margin: 0 auto;
+  margin-top: 15px;
+  vertical-align: top;
+  width: 100%;
+  height: 25px;
+  background-position: center;
+  cursor: pointer;
+  /* background-color: #D98C66; */
+  border-radius: 5px;
+}
+.editImage,
+.editVideo {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 100%;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  background-color: #d98c66;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.6s ease;
+
+  position: relative;
+  left: 0.25rem;
+}
+.uploadImage input#file,
+.uploadVideo input#file2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.editImage:hover,
+.editVideo:hover {
+  background-color: #dd8152;
+}
+.editContect {
+  width: 90%;
+  margin: 0 auto;
+}
+.editContect_title {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+}
+.editContect .top span {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.clear {
+  clear: both;
+}
+.editContect h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.editContect textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+  resize: none;
+}
+.editContect_tags {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#tags span {
+  position: relative;
+  padding: 3px 10px 3px 22px;
+  margin-right: 5px;
+  background-color: #d98c66;
+  color: #fff;
+  border-radius: 5px;
+}
+#tags span::before {
+  content: "#";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  border-radius: 50%;
+}
+#tags span:hover {
+  background-color: #dd8152;
+  cursor: pointer;
+}
+.material_bar {
+  /* background-color: #fa6a6a; */
+  text-align: center;
+}
+.editContect_material {
+  width: 30%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.editContect_count {
+  width: 20%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.editContect_icon {
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+}
+.mod-todo-list .dragable-ul .editContect_icon2 {
+  float: none;
+}
+.editContect_icon i {
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  color: #d98c66;
+  font-size: 28px;
+  margin-right: 20px;
+  transition: 0.6s ease;
+}
+.editContect_icon i:hover {
+  color: #dd8152;
+}
+.editContect_icon a {
+  width: 30px;
+  height: 40px;
+}
+
+#steplist li {
+  margin-bottom: 15px;
+}
+.allStep {
+  width: 90%;
+  margin: 0 auto;
+}
+.allStep h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.stepnum {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  background-color: #c4c4c4;
+}
+.stepRow {
+  position: relative;
+}
+.stepID_num {
+  display: none;
+}
+.del_step {
+  position: absolute;
+  top: 50px;
+  width: 40px;
+  font-size: 10px;
+  z-index: 1;
+  text-align: center;
+}
+.del_step {
+  color: #f1f1f1;
+}
+.del_step i {
+  width: 100%;
+  font-size: 24px;
+  color: #f1f1f1;
+  transition: 0.6s ease;
+}
+.del_step :hover {
+  color: #d98c66;
+  cursor: pointer;
+}
+.stepnum span {
+  color: #fff;
+  line-height: 40px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.stepdetail {
+  position: relative;
+}
+
+.allStep textarea {
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
+  resize: none;
+  float: right;
+}
+.uploadStepPic {
+  margin-top: 15px;
+  width: 90%;
+  /* background-color: #fa6a6a; */
+  float: right;
+  /* height: 100px; */
+}
+.all_spic {
+  position: relative;
+  /* background-color: #6a6cfa; */
+  width: 152px;
+  height: 102px;
+  border: #c4c4c4 1px solid;
+  float: left;
+  margin-right: 1%;
+  transition: 0.6s ease;
+}
+.show_sPic {
+  width: 150px;
+  height: 100px;
+  filter: brightness(70%);
+  display: none;
+}
+.StepPic {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 1;
+  top: 0;
+  left: 57px;
+  margin: 0 auto;
+}
+.spicDelete {
+  /* content: '🗙'; */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  background-color: #d85858;
+  color: #fff;
+  transition: 0.6s ease;
+}
+.spicDelete:hover {
+  background-color: #868686;
+  cursor: pointer;
+}
+.all_spic:hover {
+  border: #d98c66 1px solid;
+}
+.StepPic i {
+  color: #c4c4c4;
+  font-size: 40px;
+  line-height: 100px;
+  text-align: center;
+  display: block;
+  transition: 0.6s ease;
+}
+.StepPic i:hover {
+  cursor: pointer;
+  color: #d98c66;
+}
+.step-add {
+  width: 100%;
+  text-align: center;
+}
+#addstepButton {
+  padding: 10px 15px;
+  margin-top: 20px;
+  background-color: rgba(217, 140, 102, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  width: 300px;
+  font-size: 16px;
+  transition: 0.6s ease;
+}
+#addstepButton:hover {
+  cursor: pointer;
+  background-color: rgba(217, 140, 102, 1);
+}
+
+
+@media (max-width: 1024px) {
+  .edit_type h1 {
+    display: none;
+  }
+  .edit_type ul {
+    width: 100%;
+  }
+  .edit_type ul li {
+    margin: 5px;
+  }
+  .edit_left,
+  .edit_right {
+    width: 100%;
+    height: auto;
+  }
+  .preview {
+    height: 230px;
+  }
+}
+
+@media (max-width: 952px) {
+  .edit_left, .edit_right {
+    overflow-x: hidden;
+    padding-bottom: 0px;
+  }
+  .editContect {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .allStep h2 {
+    margin-bottom: 10px;
+  }
+  .allStep {
+    width: 100%;
+  }
+  .stepnum {
+    width: 100%;
+    height: 30px;
+    margin-right: 0;
+    border-bottom-right-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    
+  }
+  .allStep textarea {
+    width: 100%;
+    height: 100px;
+  }
+  .stepnum span {
+    line-height: 30px;
+    color: #d98c66;
+    text-align: left;
+  }
+  .stepnum span::before{
+    content: "步驟 ";
+    font-weight: 400;
+  }
+  .uploadStepPic{
+    width: 100%;
+  }
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://files.cnblogs.com/kuikui/jquery.js"
+    ></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/edit2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/drag.css" />
+    <link rel="stylesheet" type="text/css" href="css/stepimg.css" />
+    <link rel="stylesheet" type="text/css" href="css/uploadImg.css" />
+    <link rel="stylesheet" type="text/css" href="css/uploadCoverVideo.css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+
+    <script>
+      $(function () {
+        // TAGS BOX
+
+        $("#tags input").on({
+          focusout: function () {
+            var txt = this.value.replace(
+              /[^a-z0-9\+\-\.\#\u4e00-\u9fa5]/gi,
+              ""
+            ); // allowed characters
+            if (txt)
+              $("<span/>", { text: txt.toLowerCase(), insertBefore: this });
+            this.value = "";
+          },
+          keyup: function (ev) {
+            // if: comma|enter (delimit more keyCodes with | pipe)
+            if (/(188|13)/.test(ev.which)) $(this).focusout();
+          },
+        });
+        $("#tags").on("click", "span", function () {
+          if (confirm("確定要移除「" + $(this).text() + "」嗎?"))
+            $(this).remove();
+        });
+      });
+    </script>
+
+    <!-- 偵測字數 -->
+    <script>
+      function checkLength(which) {
+        var maxChars = 20;
+        if (which.value.length > maxChars)
+          which.value = which.value.substring(0, maxChars);
+        // 剩多少自可輸入
+        // var curr = maxChars - which.value.length;
+        // 輸入了幾個字
+        var curr = which.value.length;
+        document.getElementById("chLeft").innerHTML = curr.toString();
+      }
+
+      function checkLength2(which) {
+        var maxChars2 = 150;
+        if (which.value.length > maxChars2)
+          which.value = which.value.substring(0, maxChars2);
+        var curr2 = which.value.length;
+        document.getElementById("chLeft2").innerHTML = curr2.toString();
+      }
+
+      function checkLength3(which) {
+        var maxChars3 = 20;
+        if (which.value.length > maxChars3)
+          which.value = which.value.substring(0, maxChars3);
+        var curr3 = which.value.length;
+        document.getElementById("chLeft3").innerHTML = curr3.toString();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list"></i><span>課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">UV還氧樹脂類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">羊毛氈類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container">
+          <form action="">
+            <div class="edit_type">
+              <h1>教學標題：<span id="phase"></span></h1>
+              <ul>
+                <a href="#"><li class="send">發布</li></a>
+                <a href="#"><li class="edit_btn">儲存</li></a>
+                <a href="#"><li class="edit_btn">取消</li></a>
+              </ul>
+            </div>
+            <div class="editAll">
+              <div class="edit_left">
+                <div class="edit1">
+                  <span class="edit_choose_type_title">種類選擇：</span>
+                  <select
+                    name="edit_choose_type"
+                    class="edit_choose_type"
+                    id="what_tpye"
+                  >
+                    <option selected>請選擇</option>
+                    <option>剪貼紙藝品類</option>
+                    <option>裁縫毛線織布類</option>
+                    <option>羊毛氈類</option>
+                    <option>UV還氧樹脂類</option>
+                    <option>木工竹藝類</option>
+                    <option>絹印手染布類</option>
+                    <option>陶藝黏土玻璃類</option>
+                    <option>拼豆串珠類</option>
+                    <option>皮革皮件類</option>
+                    <option>金工類</option>
+                    <option>模型類</option>
+                    <option>傳統工藝類</option>
+                    <option>肥皂精油蠟燭類</option>
+                    <option>生活用品類</option>
+                    <option>其他類</option>
+                  </select>
+                </div>
+                <div class="edit2">
+                  <div class="pcoverBox">
+                    <div
+                      class="pcover"
+                      onclick="defaultBtnActive()"
+                      id="custom-btn"
+                    >
+                      <div class="image">
+                        <img id="coverimg" alt="" />
+                      </div>
+                      <div class="content">
+                        <div class="icon">
+                          <i class="fa-regular fa-image"></i>
+                        </div>
+                        <div class="text">封面圖片</div>
+                      </div>
+                      <div id="cancel-btn">
+                        <i class="fas fa-times"></i>
+                      </div>
+                      <div class="coverFile">File name here</div>
+                    </div>
+                    <input
+                      id="default-btn"
+                      type="file"
+                      hidden
+                      accept="image/png, image/jpeg, image/gif, image/jpg"
+                      multiple
+                    />
+                  </div>
+                </div>
+                <div class="edit3">
+                  <div class="pvideoBox">
+                    <div
+                      class="pvideo"
+                      onclick="videodefaultBtnActive()"
+                      id="videocustom-btn"
+                    >
+                      <div class="image">
+                        <!-- <img id="videoimg" src="https://bit.ly/3ubuq5o" alt=""> -->
+                        <video
+                          id="videoimg"
+                          src="https://bit.ly/3ubuq5o"
+                        ></video>
+                      </div>
+                      <div class="content">
+                        <div class="icon">
+                          <i class="fa-solid fa-film"></i>
+                        </div>
+                        <div class="text">教學影片</div>
+                      </div>
+                      <div id="videocancel-btn">
+                        <i class="fas fa-times"></i>
+                      </div>
+                      <div class="videoFile">File name here</div>
+                    </div>
+                    <!-- <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button> -->
+                    <input
+                      id="videodefault-btn"
+                      type="file"
+                      hidden
+                      accept="video/avi, video/mp4, video/mpg"
+                      multiple
+                    />
+                  </div>
+                </div>
+                <div class="editContect">
+                  <div class="top">
+                    <!-- 標題 -->
+                    <input
+                      type="text"
+                      name=""
+                      id="Big_title"
+                      placeholder="請輸入標題"
+                      maxlength="20"
+                      class="editContect_title"
+                      required
+                      onkeyup="checkLength(this);"
+                    />
+                    <span>/ 20</span><span id="chLeft">0</span>
+                    <div class="clear"></div>
+                    <!-- 簡介 -->
+                    <h2>簡介</h2>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="6"
+                      placeholder="請輸入簡介"
+                      maxlength="150"
+                      class="editContect_details"
+                      required
+                      onkeyup="checkLength2(this);"
+                    ></textarea>
+                    <span>/ 150</span><span id="chLeft2">0</span>
+                    <div class="clear"></div>
+                    <!-- 標籤 -->
+                    <div id="tags">
+                      <!-- <span>大創</span>
+                    <span>可愛吊飾</span>
+                    <span>易上手SoEasy</span> -->
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="新增tag"
+                        maxlength="20"
+                        class="editContect_tags"
+                        onkeyup="checkLength3(this);"
+                      />
+                    </div>
+                    <span>/ 20</span><span id="chLeft3">0</span>
+                    <div class="clear"></div>
+                  </div>
+
+                  <!-- 材料 -->
+                  <h2>材料</h2>
+                  <ul id="draggable">
+                    <!-- <li class="list-item">
+                    <input type="text" name="" id="" placeholder="材料名稱" maxlength="20" class="editContect_material" />
+                    <input type="text" name="" id="" placeholder="數量" maxlength="20" class="editContect_count" />
+                    <span class="editContect_icon" href=""><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="editContect_icon deleteIcon" href=""><i class="fa-solid fa-trash-can"></i></span>
+                    <span class="editContect_icon drag" href=""><i class="fa-solid fa-grip-lines"></i></span>
+                  </li>
+                  <li class="list-item">
+                    <input type="text" name="" id="" placeholder="材料名稱" maxlength="20" class="editContect_material" />
+                    <input type="text" name="" id="" placeholder="數量" maxlength="20" class="editContect_count" />
+                    <span class="editContect_icon" href=""><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="editContect_icon deleteIcon" href=""><i class="fa-solid fa-trash-can"></i></span>
+                    <span class="editContect_icon drag" href=""><i class="fa-solid fa-grip-lines"></i></span>
+                  </li> -->
+                  </ul>
+                  <div class="list-add">
+                    <button
+                      type="button"
+                      class="button"
+                      title="添加欄位"
+                      id="addItemButton"
+                      tabindex="-1"
+                    >
+                      添加材料
+                    </button>
+                  </div>
+
+                  <!-- 工具 -->
+                  <h2>工具</h2>
+                  <ul id="draggable2">
+                    <!-- <li class="list-item">
+                    <input type="text" name="" id="" placeholder="工具名稱" maxlength="20" class="editContect_material" />
+                    <input type="text" name="" id="" placeholder="數量" maxlength="20" class="editContect_count" />
+                    <span class="editContect_icon" href=""><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="editContect_icon deleteIcon2" href=""><i class="fa-solid fa-trash-can"></i></span>
+                    <span class="editContect_icon drag" href=""><i class="fa-solid fa-grip-lines"></i></span>
+                  </li>
+                  <li class="list-item">
+                    <input type="text" name="" id="" placeholder="工具名稱" maxlength="20" class="editContect_material" />
+                    <input type="text" name="" id="" placeholder="數量" maxlength="20" class="editContect_count" />
+                    <span class="editContect_icon" href=""><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="editContect_icon deleteIcon" href=""><i class="fa-solid fa-trash-can"></i></span>
+                    <span class="editContect_icon drag" href=""><i class="fa-solid fa-grip-lines"></i></span>
+                  </li> -->
+                  </ul>
+                  <div class="list-add">
+                    <button
+                      type="button"
+                      class="button"
+                      title="添加欄位"
+                      id="addItemButton2"
+                      tabindex="-1"
+                    >
+                      添加工具
+                    </button>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="edit_right">
+                <div class="allStep">
+                  <h2>步驟</h2>
+                  <ul id="steplist">
+                    <!-- 步驟區 -->
+                  </ul>
+                  <div class="NewStepBtn">
+                    <button class="stepBtn">新增步驟</button>
+                  </div>
+
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/uploadCoverVideo.js"></script>
+    <script src="js/uploadImage.js"></script>
+  </body>
+</html>

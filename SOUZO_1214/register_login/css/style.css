@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+	background: #f9f9f9;
+	font-family: "Roboto", sans-serif;
+}
+
+.main-content {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.shadow {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.login-card {
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+}
+.login-card .login-message {
+	flex: 1;
+	background: #E89368;
+	color: #fff;
+}
+.login-card .login-body {
+	flex: 2;
+	padding: 48px 24px;
+}
+
+.login-card .login-body .login-body-wrapper {
+	max-width: 400px;
+}
+
+.or-divider {
+	height: 40px;
+	width: 40px;
+}
+
+.welcome{
+	color: #E89368;
+}
+
+.btn-facebook {
+	border-color: none;
+	width: 20%
+}
+.btn-facebook:hover,
+.btn-facebook:focus {
+	color: #fff;
+}
+
+.btn-google {
+	border-color: none;
+	width: 22%
+	
+}
+.btn-google:hover,
+.btn-google:focus {
+	color: #fff;
+}
+.login-btn {
+  margin:0 auto;
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  width: 80px;
+  border: 2px solid white; /* 登入按鈕設定*/
+  outline: none;
+}
+.signup-btn {
+  margin:0 auto;
+  background-color: #E89368;
+  border:none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 80px; /* 註冊按鈕設定*/
+  outline: none;
+}
+.fbbutton{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px auto;
+	text-align: center;
+	padding:5px;
+}
+
+
+.logPage{
+	width: 150px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+
+.question{
+	text-align: center;
+	padding-bottom: 20px;
+	color: #ccc;
+	font-size: 14px;
+	display: none;
+}
+.question a{
+	color: #E89368;
+	text-decoration: none;
+}
+.question a:active{
+	color: #ccc;
+}
+
+
+@media (min-width: 768px) {
+	.login-card .login-body {
+		padding: 80px 50px;
+	}
+}
+@media (max-width: 768px) {
+	.question{
+		display: block;
+	}
+}
+@media (max-width: 992px){
+	.qus{
+		font-size: 20px;
+	}
+}
+

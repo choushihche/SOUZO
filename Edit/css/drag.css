@@ -1,0 +1,108 @@
+.button:focus {
+  outline: 0;
+}
+
+#addItemButton, #addItemButton2 {
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: rgba(217, 140, 102, .7);
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  width: 70%;
+  font-size: 16px;
+  transition: .6s ease;
+}
+
+.list-add {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 0px;
+}
+
+#addItemButton:hover, #addItemButton2:hover {
+  cursor: pointer;
+  background-color: rgba(217, 140, 102, 1);
+}
+
+
+.list-item {
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 5px 5px 5px 0px;
+  /* border-bottom: 1px solid black; */
+  padding: 5px;
+  list-style: none;
+  font-size: 17px;
+}
+.list-item .editContect_material {
+  width: 30%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #C4C4C4 1px solid;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.list-item .editContect_material:focus {
+  outline: 0;
+}
+
+.editContect_count {
+  width: 20%;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  border: #C4C4C4 1px solid;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.editContect_icon i {
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  color: #D98C66;
+  font-size: 28px;
+  margin-right: 20px;
+}
+.editContect_icon i:hover {
+  color: #dd8152;
+}
+  
+.deleteIcon {
+  font-size: 18px;
+  cursor: pointer;
+}
+  
+.drag:hover{
+  cursor: move;
+}
+
+@media (max-width: 952px) {
+  .list-add {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 0px;
+  }
+  #addItemButton, #addItemButton2 {
+    width: 100%;
+    background-color: #d98c66;
+  }
+  .list-item .editContect_material {
+    width: 35%;
+  }
+  .list-item .editContect_material {
+    margin-right: 10px;
+  }
+  .drag{
+    display: none;
+  }
+  .editContect_count {
+    margin-right: 10px;
+  }
+}

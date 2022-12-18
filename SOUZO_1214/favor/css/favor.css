@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*main*/
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem 1rem;
+  padding: 3rem 0;
+  margin: 0 1.5rem;
+  border-top: 4px solid #CCC;
+}
+
+.video-section:first-child {
+  border-top: none;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  position: relative;
+  display: flex;
+}
+
+.thumbnail::before {
+  content: attr(data-duration);
+  position: absolute;
+  background-color: rgba(0, 0, 0, .85);
+  color: white;
+  right: 5px;
+  bottom: 5px;
+  padding: .1em .3em;
+  border-radius: .3em;
+  font-size: .9rem;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  min-height: 150px;
+  background-color: #AAA;
+}
+
+.video-bottom-section {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.channel-icon {
+  margin-right: .75rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #AAA;
+}
+
+.video-details {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.video-channel-name {
+  margin-bottom: .1rem;
+  text-decoration: none;
+  transition: color 150ms;
+}
+
+.video-channel-name:hover {
+  color: #111;
+}
+
+.video-channel-name,
+.video-metadata {
+  color: #555;
+}
+
+.video-section-title {
+  grid-column: 1 / -1;
+  margin: -.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5rem;
+}
+
+.video-section-title-close {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 2rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.videos {
+  background-color: #F9F9F9;
+}
+
+
+.categories {
+  padding: 5px 10px;
+  
+    display: flex;
+}
+
+.category-section {
+  display: flex;
+  overflow: hidden;
+}
+
+.category {
+  margin-right: 10px;
+  word-wrap: none;
+  white-space: nowrap;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: .5rem 1rem;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 150ms;
+
+}
+.sort{
+  position:relative;
+  margin-right: 10%;
+
+  text-align: right;
+
+}
+
+.category:hover {
+  background-color: #DDD;
+}
+
+.category.active {
+  background-color: #606060;
+  color: white;
+  border-color: #EEE;
+}
+
+.category:last-child {
+  margin-right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.youtube-logo {
+  height: 20px;
+}
+
+
+
+.col-half {
+    width:50%;
+}
+.col-100 {
+    width:100%;
+    display: block;
+    margin: auto;
+}
+.col-4 {
+    width:25%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.col-3_4 {
+    width:75%;
+    margin:auto;
+}
+.col-10 {
+    width:10%;
+    margin:auto;
+}
+.col-20 {
+    width:20%;
+    margin:auto;
+}
+.col-30 {
+    width:30%;
+    margin:auto;
+}
+.col-40 {
+    width:40%;
+    margin:auto;
+}
+.col-50 {
+    width:50%;
+    margin:auto;
+}
+
+
+.send_btn{
+  width: 70px;
+  height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.edit_btn{
+  width: 70px;
+  height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.title_space {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 50px;
+}
+.edit_btn:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.send_btn:hover {
+  background-color: red;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.step_text{
+  margin-top: 2%; 
+  width:100%; 
+  font-size: 16px; 
+  border-radius: 5px;
+  padding: 10px;
+}
+.step_img{
+  margin: 10% 5% 10% 5%;
+  width:90%; 
+  border-radius: 5px;
+}
+
+.item_name{
+  margin: 2% 10%; 
+  width:80%; 
+  font-size: 20px; 
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  text-align: center;
+}
+#tags{
+  float:left;
+  margin-top: 5%;
+  border-radius: 5px;
+  padding:5px;
+  font-family:Arial;
+}
+#tags > span{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#789;
+  padding:10px;
+  padding-right:28px;
+  margin:4px;
+}
+#tags > span:hover{
+  opacity:0.7;
+}
+#tags > span:after{
+ position:absolute;
+ content:"×";
+ border:1px solid;
+ padding:0px 5px;
+ margin-left:3px;
+ font-size:15px;
+}
+#tags > input{
+  background:white;
+  border:0;
+  margin:4px;
+  padding:12px;
+  width:auto;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.input{
+  background:white;
+  border:0;
+  margin:4px;
+  padding:5px;
+  width:95%;
+  font-size: 20px;
+  height: 80%;
+  border-radius: 5px;
+}
+
+.tool_btn{
+  width: 23%;
+  height: 30px;
+  margin: 0% 2% 0% 1%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: dimgray;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.tool_btn:hover {
+  background-color: #004D40;
+  color: white;
+  transform: translateY(-4px);
+}
+.sub_img{
+
+  width:8%;
+  height: auto;
+}
+.sub_btn {
+  color: white;
+  margin-right: 10px;
+  word-wrap: none;
+  white-space: nowrap;
+  border: none;
+  border-radius: 10px;
+  background-color: #D98C66;
+  padding: .5rem 1rem;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 150ms;
+
+}
+
+
+
+
+
+
